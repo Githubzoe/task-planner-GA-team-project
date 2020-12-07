@@ -713,12 +713,8 @@ button {
   font-size: 1.2rem;
 }
 
-.status--published {
+.status--in-progress {
   color: var(--cornflower-blue);
-}
-
-.status--in-work {
-  color: var(--geraldine);
 }
 
 @media (max-width: 1800px) {
@@ -729,7 +725,7 @@ button {
 
 /* Setting button */
 
-.setting {
+.icon {
   width: 2.5rem;
   height: 2.5rem;
   padding: 0.8rem;
@@ -738,17 +734,7 @@ button {
 }
 
 
-.setting--absolute {
-  position: absolute;
-  top: 2.3rem;
-  right: 1rem;
-}
-
-.setting--rotate {
-  transform: rotate(90deg);
-  }
-
-  .setting-wide {
+  .delete-icon {
     width: 2.5rem;
     height: 2.5rem;
     padding: 0.6rem;
@@ -756,30 +742,24 @@ button {
     background-color: var(--rajah);
   }
 @media (hover: hover) {
-  .setting:hover  {
+  .icon:hover  {
     background-color: var(--true-v);
+  }
+  .delete-icon:hover  {
+    background-color: var(--geraldine);
   }
 }
 
-.setting svg path {
+.icon svg path {
   fill: var(--dune);
 }
 
-@media (max-width: 1400px) {
-  .setting--absolute {
-    top: 1.7rem;
-  }
-}
 
 @media (max-width: 992px) {
   .setting {
     width: 2rem;
     height: 2rem;
     padding: 0.5rem;
-  }
-
-  .setting--absolute {
-    top: 2.2rem;
   }
 }
 
