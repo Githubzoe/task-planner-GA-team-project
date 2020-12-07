@@ -1,8 +1,5 @@
 :root {
   --font-roboto: "Roboto", Arial, sans-serif;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
 
   --athens-gray: #e9e8ec;
   --dune: #242221;
@@ -13,7 +10,6 @@
   --true-v-rgba-5: rgba(145, 116, 216, 0.5);
   --silver: #c7c7c7;
   --blue-violet: #7a61b7;
-  --viking: #aae5e5;
   --geraldine: #f79997;
   --geraldine-rgba-5: rgba(247, 153, 151, 0.5);
   --cornflower-blue: #727ef7;
@@ -721,7 +717,7 @@ a:hover {
 /* Status */
 
 .status {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .status--in-progress {
@@ -729,11 +725,6 @@ a:hover {
   background-color: var(--cornflower-blue);
 }
 
-@media (max-width: 1800px) {
-  .status {
-    font-size: 1rem;
-  }
-}
 
 /* Edit/Delete button */
 
@@ -762,9 +753,6 @@ a:hover {
   }
 }
 
-/* .btn svg path {
-  fill: var(--dune);
-} */
 
 
 @media (max-width: 992px) {
@@ -777,35 +765,18 @@ a:hover {
 
 
 
-
-
 /* modal section */
 #task-modal-add {
   background-color: var(--true-v);
 }
 
-.priorities button {
-  color: var(--true-v);
+.priority {
+  font-size: 1.5rem;
 }
 
-.statuses button {
-  color: var(--true-v);
+.priority-medium {
+  color: #FF9F19;
 }
-
-.priorities button:hover {
-  color:#fff;
-  background-color: var(--true-v);
-}
-
-.statuses button:hover {
-  color:#fff;
-  background-color: var(--true-v);
-}
-
-
-
-
-
 
 @media (hover: hover) {
   .banner__button:hover {
