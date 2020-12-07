@@ -749,7 +749,11 @@ button {
   }
 
   .setting-wide {
-    padding: 0.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.6rem;
+    border-radius: 90px;
+    background-color: var(--rajah);
   }
 @media (hover: hover) {
   .setting:hover  {
