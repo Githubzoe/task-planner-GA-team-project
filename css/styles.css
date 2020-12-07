@@ -14,7 +14,8 @@
   --silver: #c7c7c7;
   --blue-violet: #7a61b7;
   --viking: #aae5e5;
-  --geraldine: #f98f8e;
+  --geraldine: #f79997;
+  --geraldine-rgba-5: rgba(247, 153, 151, 0.5);
   --cornflower-blue: #727ef7;
   --rajah: #fdd3d6;
 }
@@ -96,6 +97,12 @@ button {
   z-index: 1;
   outline: none;
   box-shadow: 0 0 0 3px var(--true-v-rgba-5);
+}
+
+.focus--box-shadow-delete:focus {
+  z-index: 1;
+  outline: none;
+  box-shadow: 0 0 0 3px var(--geraldine-rgba-5);
 }
 
 @media (max-width: 1800px) {
