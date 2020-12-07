@@ -774,10 +774,6 @@ a:hover {
   font-size: 1.3rem;
 }
 
-.priority-medium {
-  color: #FF9F19;
-}
-
 @media (hover: hover) {
   .banner__button:hover {
     background-color: var(--true-v);
