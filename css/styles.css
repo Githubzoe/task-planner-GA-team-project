@@ -650,6 +650,10 @@ button {
   transition: background-color 0.3s ease;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 @media (hover: hover) {
   .project__link:hover .project__inform-name {
     color: var(--blue-violet);
@@ -663,7 +667,7 @@ button {
 .project__element {
   padding: 0 ;
 }
-.icon{
+.btn{
   width: 5px;
 }
 
@@ -714,7 +718,8 @@ button {
 }
 
 .status--in-progress {
-  color: var(--cornflower-blue);
+  color: white;
+  background-color: var(--cornflower-blue);
 }
 
 @media (max-width: 1800px) {
@@ -723,9 +728,9 @@ button {
   }
 }
 
-/* Setting button */
+/* Edit/Delete button */
 
-.icon {
+.edit-btn {
   width: 2.5rem;
   height: 2.5rem;
   padding: 0.8rem;
@@ -734,25 +739,25 @@ button {
 }
 
 
-  .delete-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0.6rem;
-    border-radius: 90px;
-    background-color: var(--rajah);
-  }
+.delete-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.6rem;
+  border-radius: 90px;
+  background-color: var(--rajah);
+}
 @media (hover: hover) {
-  .icon:hover  {
+  .edit-btn:hover  {
     background-color: var(--true-v);
   }
-  .delete-icon:hover  {
+  .delete-btn:hover  {
     background-color: var(--geraldine);
   }
 }
 
-.icon svg path {
+/* .btn svg path {
   fill: var(--dune);
-}
+} */
 
 
 @media (max-width: 992px) {
