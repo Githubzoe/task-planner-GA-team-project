@@ -772,10 +772,6 @@ button {
   background-color: var(--true-v);
 }
 
-.priority-medium {
-  color: var(--cornflower-blue);
-}
-
 .priorities button {
   color: var(--true-v);
 }
