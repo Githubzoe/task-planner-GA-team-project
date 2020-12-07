@@ -12,7 +12,7 @@
   <body>
     <div class="wrapper d-flex justify-content-center">
       <nav class="nav">
-        <ul class="nav__list" role="menubar">
+        <ul class="nav__list d-flex align-items-center justify-content-center" role="menubar">
           <li class="nav__item">
             <a href="#" class="nav__link focus--box-shadow" role="menuitem" aria-label="Home">
               <svg class="nav__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="presentation">
@@ -52,7 +52,7 @@
       </nav>
       <main class="main col-10">
         <header class="header">
-          <div class="header__wrapper pl-5">
+          <div class="header__wrapper pl-5 d-flex align-items-center justify-content-between">
             <form action="" class="search">
               <button class="search__button focus--box-shadow" type="submit">
                 <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@
         </header>
         
         <section class="section project__section">
-          <header class="section__header">
+          <header class="section__header d-flex align-items-center justify-content-between mb-4">
             <h2 class="section__title">Task List</h2>
             <div class="section__control">
               <button class="section__button section__button--painted focus--box-shadow" type="button" aria-label="Add New project" data-toggle="modal" data-target="#newtaskinput" id="new__task">
@@ -176,8 +176,9 @@
               <perfect-scrollbar>
                 <ul class="project">
                   <li class="project__item">
+
                     <a href="#" class="project__link focus--box-shadow d-flex justify-content-around">
-                      <div class="project__wrapper" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                      <div class="project__wrapper d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
                         <div class="myTest custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="customCheck1">
                           <label class="custom-control-label" for="customCheck1"></label>
@@ -187,10 +188,10 @@
                         </div>
                         <div class="project__element project__photo col-2">
                           <ul class="photo">
-                            <li class="photo__item">
+                            <li class="photo__item d-flex align-items-center justify-content-center">
                               <img src="./img/zoe.jpg" alt="Zoe's photo"/>
                             </li>
-                            <li class="photo__item">
+                            <li class="photo__item d-flex align-items-center justify-content-center">
                               <img src="./img/airone.jpg" alt="Airone's photo"/>
                             </li>
                           </ul>
@@ -201,16 +202,15 @@
                         <div class="project__element project__status col-2">
                           <span class="status status--published text-success">DONE</span>
                         </div>
-                        <div class="project__element project__priority col-2">
+                        <div class="project__element project__priority col-1 mr-4">
                           <span class="priority priority--in-work text-danger">!!! HIGH</span>
                         </div>
-                        <div class="project__element project__setting col-1">
-                          <button class="setting setting--rotate focus--box-shadow" type="button">
-                            <svg enable-background="new 0 0 515.555 515.555" height="512" viewBox="0 0 515.555 515.555" width="512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="m303.347 18.875c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 212.209c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 405.541c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                            </svg>
+                        <div class="project__element project__setting col d-flex">
+                          <button class="setting  focus--box-shadow d-flex align-items-center justify-content-center" type="button">
+                            <img src="img/edit.png" alt="">
+                          </button>
+                          <button class="setting setting-wide focus--box-shadow d-flex align-items-center justify-content-center ml-2" type="button">
+                            <img src="https://img.icons8.com/carbon-copy/100/000000/filled-trash.png"/>
                           </button>
                         </div>
                       </div>
@@ -224,7 +224,7 @@
                   </li>
                   <li class="project__item">
                     <a href="#" class="project__link focus--box-shadow d-flex justify-content-around">
-                      <div class="project__wrapper" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                      <div class="project__wrapper d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample1">
                         <div class="myTest custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="customCheck2">
                           <label class="custom-control-label" for="customCheck2"></label>
@@ -234,10 +234,10 @@
                         </div>
                         <div class="project__element project__photo col-2">
                           <ul class="photo">
-                            <li class="photo__item">
+                            <li class="photo__item d-flex align-items-center justify-content-center">
                               <img src="./img/zoe.jpg" alt="Zoe's photo"/>
                             </li>
-                            <li class="photo__item">
+                            <li class="photo__item d-flex align-items-center justify-content-center">
                               <img src="./img/airone.jpg" alt="Airone's photo"/>
                             </li>
                           </ul>
@@ -248,16 +248,15 @@
                         <div class="project__element project__status col-2">
                           <span class="status status--published text-success">DONE</span>
                         </div>
-                        <div class="project__element project__priority col-2">
+                        <div class="project__element project__priority col-1 mr-4">
                           <span class="priority priority--in-work text-danger">!!! HIGH</span>
                         </div>
-                        <div class="project__element project__setting col-1">
-                          <button class="setting setting--rotate focus--box-shadow" type="button">
-                            <svg enable-background="new 0 0 515.555 515.555" height="512" viewBox="0 0 515.555 515.555" width="512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="m303.347 18.875c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 212.209c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 405.541c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                            </svg>
+                        <div class="project__element project__setting col d-flex">
+                          <button class="setting setting--rotate focus--box-shadow d-flex align-items-center justify-content-center" type="button">
+                            <img src="https://img.icons8.com/android/24/000000/edit.png"/>
+                          </button>
+                          <button class="setting setting-wide focus--box-shadow d-flex align-items-center justify-content-center ml-2" type="button">
+                            <img src="https://img.icons8.com/carbon-copy/100/000000/filled-trash.png"/>
                           </button>
                         </div>
                       </div>
@@ -271,7 +270,7 @@
                   </li>
                   <li class="project__item">
                     <a href="#" class="project__link focus--box-shadow">
-                      <div class="project__wrapper" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                      <div class="project__wrapper d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample2">
                         <div class="myTest custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="customCheck3">
                           <label class="custom-control-label" for="customCheck3"></label>
@@ -281,7 +280,7 @@
                         </div>
                         <div class="project__element project__photo col-2">
                           <ul class="photo">
-                            <li class="photo__item">
+                            <li class="photo__item d-flex align-items-center justify-content-center">
                               <img src="./img/zoe.jpg" alt="Zoe's photo"/>
                             </li>
                           </ul>
@@ -292,16 +291,15 @@
                         <div class="project__element project__status col-2">
                           <span class="status status--published text-danger">TODO</span>
                         </div>
-                        <div class="project__element project__priority col-2">
-                          <span class="priority priority--in-work text-secondary">! LOW</span>
+                        <div class="project__element project__priority col-1 mr-4">
+                          <span class="priority priority--in-work text-info">! LOW</span>
                         </div>
-                        <div class="project__element project__setting col-1">
-                          <button class="setting setting--rotate focus--box-shadow" type="button">
-                            <svg enable-background="new 0 0 515.555 515.555" height="512" viewBox="0 0 515.555 515.555" width="512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="m303.347 18.875c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 212.209c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 405.541c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                            </svg>
+                        <div class="project__element project__setting col d-flex">
+                          <button class="setting setting--rotate focus--box-shadow d-flex align-items-center justify-content-center" type="button">
+                            <img src="https://img.icons8.com/android/24/000000/edit.png"/>
+                          </button>
+                          <button class="setting setting-wide focus--box-shadow d-flex align-items-center justify-content-center ml-2" type="button">
+                            <img src="https://img.icons8.com/carbon-copy/100/000000/filled-trash.png"/>
                           </button>
                         </div>
                       </div>
@@ -314,7 +312,7 @@
                   </li>
                   <li class="project__item">
                     <a href="#" class="project__link focus--box-shadow">
-                      <div class="project__wrapper" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                      <div class="project__wrapper d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample2">
                         <div class="myTest custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="customCheck4">
                           <label class="custom-control-label" for="customCheck4"></label>
@@ -324,7 +322,7 @@
                         </div>
                         <div class="project__element project__photo col-2">
                           <ul class="photo">
-                            <li class="photo__item">
+                            <li class="photo__item d-flex align-items-center justify-content-center">
                               <img src="./img/zoe.jpg" alt="Zoe's photo"/>
                             </li>
                           </ul>
@@ -333,18 +331,17 @@
                           <time class="date" datetime="2020-05-05T10:00:00">01/12/2020</time>
                         </div>
                         <div class="project__element project__status col-2">
-                          <span class="status status--published text-info">IN PROGRESS</span>
+                          <span class="status status--published text-warning">IN PROGRESS</span>
                         </div>
-                        <div class="project__element project__priority col-2">
-                          <span class="priority priority--in-work text-secondary">! LOW</span>
+                        <div class="project__element project__priority col-1 mr-4">
+                          <span class="priority priority--in-work text-info">! LOW</span>
                         </div>
-                        <div class="project__element project__setting col-1">
-                          <button class="setting setting--rotate focus--box-shadow" type="button">
-                            <svg enable-background="new 0 0 515.555 515.555" height="512" viewBox="0 0 515.555 515.555" width="512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="m303.347 18.875c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 212.209c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 405.541c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                            </svg>
+                        <div class="project__element project__setting col d-flex">
+                          <button class="setting setting--rotate focus--box-shadow d-flex align-items-center justify-content-center" type="button">
+                            <img src="https://img.icons8.com/android/24/000000/edit.png"/>
+                          </button>
+                          <button class="setting setting-wide focus--box-shadow d-flex align-items-center justify-content-center ml-2" type="button">
+                            <img src="https://img.icons8.com/carbon-copy/100/000000/filled-trash.png"/>
                           </button>
                         </div>
                       </div>
@@ -357,7 +354,7 @@
                   </li>
                   <li class="project__item">
                     <a href="#" class="project__link focus--box-shadow">
-                      <div class="project__wrapper" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                      <div class="project__wrapper d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample3">
                         <div class="myTest custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="customCheck5">
                           <label class="custom-control-label" for="customCheck5"></label>
@@ -367,7 +364,7 @@
                         </div>
                         <div class="project__element project__photo col-2">
                           <ul class="photo">
-                            <li class="photo__item">
+                            <li class="photo__item d-flex align-items-center justify-content-center">
                               <img src="./img/zoe.jpg" alt="Zoe's photo"/>
                             </li>
                           </ul>
@@ -378,16 +375,15 @@
                         <div class="project__element project__status col-2">
                           <span class="status status--in-work text-danger">TODO</span>
                         </div>
-                        <div class="project__element project__priority col-2">
-                          <span class="priority priority--in-work text-info">!! MEDIUM</span>
+                        <div class="project__element project__priority col-1 mr-4">
+                          <span class="priority priority--in-work text-warning">!! MEDIUM</span>
                         </div>
-                        <div class="project__element project__setting col-1">
-                          <button class="setting setting--rotate focus--box-shadow" type="button">
-                            <svg enable-background="new 0 0 515.555 515.555" height="512" viewBox="0 0 515.555 515.555" width="512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="m303.347 18.875c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 212.209c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 405.541c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                            </svg>
+                        <div class="project__element project__setting col d-flex">
+                          <button class="setting setting--rotate focus--box-shadow d-flex align-items-center justify-content-center" type="button">
+                            <img src="https://img.icons8.com/android/24/000000/edit.png"/>
+                          </button>
+                          <button class="setting setting-wide focus--box-shadow d-flex align-items-center justify-content-center ml-2" type="button">
+                            <img src="https://img.icons8.com/carbon-copy/100/000000/filled-trash.png"/>
                           </button>
                         </div>
                       </div>
@@ -400,7 +396,7 @@
                   </li>
                   <li class="project__item">
                     <a href="#" class="project__link focus--box-shadow">
-                      <div class="project__wrapper" data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                      <div class="project__wrapper d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample3">
                         <div class="myTest custom-control custom-checkbox">
                           <input type="checkbox" class="custom-control-input" id="customCheck6">
                           <label class="custom-control-label" for="customCheck6"></label>
@@ -410,10 +406,10 @@
                         </div>
                         <div class="project__element project__photo col-2">
                           <ul class="photo">
-                            <li class="photo__item">
+                            <li class="photo__item d-flex align-items-center justify-content-center">
                               <img src="./img/zoe.jpg" alt="Zoe's photo"/>
                             </li>
-                            <li class="photo__item">
+                            <li class="photo__item d-flex align-items-center justify-content-center">
                               <img src="./img/airone.jpg" alt="Airone's photo"/>
                             </li>
                           </ul>
@@ -424,16 +420,15 @@
                         <div class="project__element project__status col-2">
                           <span class="status status--in-work text-danger">TODO</span>
                         </div>
-                        <div class="project__element project__priority col-2">
+                        <div class="project__element project__priority col-1 mr-4">
                           <span class="priority priority--in-work text-danger">!!! HIGH</span>
                         </div>
-                        <div class="project__element project__setting col-1">
-                          <button class="setting setting--rotate focus--box-shadow" type="button">
-                            <svg enable-background="new 0 0 515.555 515.555" height="512" viewBox="0 0 515.555 515.555" width="512" xmlns="http://www.w3.org/2000/svg">
-                              <path d="m303.347 18.875c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 212.209c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                              <path d="m303.347 405.541c25.167 25.167 25.167 65.971 0 91.138s-65.971 25.167-91.138 0-25.167-65.971 0-91.138c25.166-25.167 65.97-25.167 91.138 0"/>
-                            </svg>
+                        <div class="project__element project__setting col d-flex">
+                          <button class="setting setting--rotate focus--box-shadow d-flex align-items-center justify-content-center" type="button">
+                            <img src="https://img.icons8.com/android/24/000000/edit.png"/>
+                          </button>
+                          <button class="setting setting-wide focus--box-shadow d-flex align-items-center justify-content-center ml-2" type="button">
+                            <img src="https://img.icons8.com/carbon-copy/100/000000/filled-trash.png"/>
                           </button>
                         </div>
                       </div>
