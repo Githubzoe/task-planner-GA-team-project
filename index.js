@@ -42,7 +42,8 @@ newTaskForm.addEventListener('submit', (event) => {
     }else{
         taskDescriptionErrorMessage.style.display = "none"
     };
-    if(!validTaskNameInput(dueDate) || !validateDueDateYear(dueDate)){
+    // if(!validTaskNameInput(dueDate) || !validateDueDateYear(dueDate)){
+    if(!validTaskNameInput(dueDate)){    
         dueDateErrorMessage.innerHTML = "You didn't choose the due date. <br> Please choose a due date.";
         dueDateErrorMessage.style.display = "block"
     }else{
@@ -96,6 +97,7 @@ function validateBlankSpace (data){
         return true};
 };
 
+// not working ---
 function validateDueDateYear(data){
     let date_regex = /^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(19|20)\d{2}$/;
     if (!(date_regex.test(data))){
