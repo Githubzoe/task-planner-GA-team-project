@@ -30,25 +30,25 @@ newTaskForm.addEventListener('submit', (event) => {
     const status = newTaskStatus.value;
     const priority = newTaskPriority.value;
     if(!validTaskNameInput(name)){
-        taskNameErrorMessage.innerHTML = "Task name cannot be blank. Please enter a task name.";
+        taskNameErrorMessage.innerHTML = "Task name cannot be empty. Please enter a task name.";
         taskNameErrorMessage.style.display = "block"
     }else{
         taskNameErrorMessage.style.display = "none";
     };
     if(!validTaskDescriptionInput(description)){
-        taskDescriptionErrorMessage.innerHTML = "Task description cannot be blank. Please enter a task description.";
+        taskDescriptionErrorMessage.innerHTML = "Task description cannot be empty. Please enter a task description.";
         taskDescriptionErrorMessage.style.display = "block"
     }else{
         taskDescriptionErrorMessage.style.display = "none"
     };
     if(!validDueDateInput(dueDate)){
-        dueDateErrorMessage.innerHTML = "You either did not choose the due date or the date you have chosen was in the past. <br> Please choose a date that's not in the past.";
+        dueDateErrorMessage.innerHTML = "You didn't choose the due date. <br> Please choose a due date.";
         dueDateErrorMessage.style.display = "block"
     }else{
         dueDateErrorMessage.style.display = "none"
     };
     if(!validAssignedToInput(assignedTo)){
-        assignedToErrorMessage.innerHTML = "Assigned To cannot be blank. <br> Please enter (an) assignee(s).";
+        assignedToErrorMessage.innerHTML = "Assigned To cannot be empty. <br> Please enter (an) assignee(s).";
         assignedToErrorMessage.style.display = "block"
     }else{
         assignedToErrorMessage.style.display = "none"
