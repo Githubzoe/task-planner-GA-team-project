@@ -72,6 +72,10 @@ a {
   transition: color 0.3s ease;
 }
 
+.none {
+  display: none;
+}
+
 @media (hover: hover) {
   a:hover {
     color: var(--blue-violet);

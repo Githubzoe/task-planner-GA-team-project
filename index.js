@@ -17,18 +17,30 @@ newTaskForm.addEventListener('submit', (event) => {
     const assignedToErrorMessage = document.querySelector('#assignedToAlertMessage');
     const statusErrorMessage = document.querySelector('#statusAlertMessage');
     const priorityErrorMessage = document.querySelector('#priorityAlertMessage');
-    
+    // const errorMessages = [taskNameErrorMessage, taskDescriptionErrorMessage, dueDateErrorMessage,assignedToErrorMessage,statusErrorMessage,priorityErrorMessage];
+    // const openNewTask =document.querySelector("#openNewTask");
+    // openNewTask.addEventListener("click", clearValidation());
     /*
         Validation code here
     */
 
     // Get the values of the inputs
+    
     const name = newTaskNameInput.value;
     const description = newTaskDescription.value;
     const assignedTo = newTaskAssignedTo.value;
     const dueDate = newTaskDueDate.value;
     const status = newTaskStatus.value;
     const priority = newTaskPriority.value;
+    // const taskDetails = [name, description, assignedTo, dueDate, status, priority];
+
+    // newTaskDueDate.addEventListener("input", function(event){
+    //     const today = todayConvertor();
+    //     const dueDate = new Date(event.target.value);
+    //     validation(event.target, today <= dueDate);
+    // });
+
+
     if(!validTaskNameInput(name)){
         taskNameErrorMessage.innerHTML = "Task name cannot be empty. Please enter a task name.";
         taskNameErrorMessage.style.display = "block"
@@ -65,7 +77,19 @@ newTaskForm.addEventListener('submit', (event) => {
     }else{
         priorityErrorMessage.style.display = "none"
     };
-});
+
+//     function clearValidation(){
+//         errorMessages.map(item=>item.style.display = "none");
+//     }
+// });
+
+
+
+// function clearValues(){
+//     taskDetails.map(item=>item.value=null);
+//     selectPriority.map(priority => priority.selected = false);
+//     selectStatus.map(status => status.selected = false);
+// }
 
 
 
@@ -87,3 +111,17 @@ function validStatusInput(status){
 function validPriorityInput(priority){
     return priority !== null && priority !== '';
 }
+// function todayConvertor(){
+//     const today = new Date();
+//     return today.setHours(0,0,0,0);
+// }
+// function validation(taskItem, boolean){
+//     if(boolean){
+//         taskItem.classList.remove("is-invalid");
+//         taskItem.classList.add("is-valid");
+//     } else {
+//         taskItem.classList.remove("is-valid");
+//         taskItem.classList.add("is-invalid");
+//     }
+
+// }
