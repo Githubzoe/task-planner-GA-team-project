@@ -72,6 +72,11 @@ a {
   transition: color 0.3s ease;
 }
 
+.invalid-feedback{
+  font-size: 100%;
+}
+
+
 @media (hover: hover) {
   a:hover {
     color: var(--blue-violet);
