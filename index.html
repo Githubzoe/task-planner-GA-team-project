@@ -82,7 +82,7 @@
               <div class="modal fade" id="newtaskinput">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                        <form id="newTaskForm">
+                        <form id="newTaskForm" class="needs-validation" novalidate>
                             <div class="modal-header">
         
                                 <h5 class="modal-title">Add task / project</h5>
@@ -98,15 +98,15 @@
         
                                 <div class="form-group">
                                     <label for="taskTitle">Task Name</label>
-                                    <input class="form-control col-lg-12" type="text" id="newTaskNameInput" name="taskTitle" placeholder="Please enter the task name...">
-                                    <div id="taskNameAlertMessage" class="alert alert-danger invalid-feedback" role="alert">
+                                    <input class="form-control col-lg-12" type="text" id="newTaskNameInput" name="taskTitle" placeholder="Please enter the task name..." required>
+                                    <div class="invalid-feedback" role="alert">
                                       Please enter a valid task name.
                                     </div>
                                 </div>
                                 <div class="form-group">
                                   <label for="taskDescription">Task Description</label>
-                                  <textarea class="form-control" id="newTaskDescription" placeholder="Please enter the task description..."></textarea>
-                                  <div id="taskDescriptionAlertMessage" class="alert alert-danger invalid-feedback" role="alert">
+                                  <textarea class="form-control" id="newTaskDescription" placeholder="Please enter the task description..." required></textarea>
+                                  <div class="invalid-feedback" role="alert">
                                     Please enter a valid task description.
                                   </div>
                                 </div>
@@ -114,16 +114,16 @@
                                     <div class="form-group col-lg-6 ">
                                         <label class="col-form-label" for="taskDueDate">Due Date</label>
                                         <input class="form-control" class="color" type="date" id="newTaskDueDate"
-                                            name="taskDueDate">
-                                        <div id="dueDateAlertMessage" class="alert alert-danger invalid-feedback" role="alert">
-                                          Please select a due date. 
+                                            name="taskDueDate" required>
+                                        <div class="invalid-feedback" role="alert">
+                                          Please select a valid due date. 
                                         </div>
                                     </div>
                                         
                                     <div class="form-group col-lg-6">
                                         <label class="col-form-label" for="taskAssignedTo">Assigned to</label>
-                                        <input class="form-control" type="text" id="newTaskAssignedTo" name="taskAssignedTo" placeholder="Please enter a person's name...">
-                                        <div id="assignedToAlertMessage" class="alert alert-danger invalid-feedback" role="alert">
+                                        <input class="form-control" type="text" id="newTaskAssignedTo" name="taskAssignedTo" placeholder="Please enter a person's name..." required>
+                                        <div class="invalid-feedback" role="alert">
                                           Please enter a valid assignee.
                                         </div>
                                     </div>
@@ -134,28 +134,28 @@
                               <div class="row">
                                 <div class="form-group col-6">
                                     <label for="priority">Status</label>
-                                    <select class="form-control" id="newTaskStatus">
+                                    <select class="form-control custom-select" id="newTaskStatus" required>
                                         <option disabled selected value>Select an option</option>
                                         <option>TODO</option>
                                         <option>IN PROGRESS</option>
                                         <option>REVIEW</option>
                                         <option>DONE</option>
                                     </select>
-                                    <div id="statusAlertMessage" style="display: none" class="alert alert-danger" role="alert">
-                                      <!-- Error message -->
+                                    <div class="invalid-feedback" role="alert">
+                                      Please select a valid status.
                                     </div>
                                 </div>
 
                                 <div class="form-group col-6">
                                   <label for="priority">Priority</label>
-                                  <select class="form-control" id="newTaskPriority">
+                                  <select class="form-control custom-select" id="newTaskPriority" required>
                                       <option disabled selected value>Select an option</option>
                                       <option>!!! High</option>
                                       <option>!! Medium</option>
                                       <option>! Low</option>
                                   </select>
-                                  <div id="priorityAlertMessage" style="display: none" class="alert alert-danger" role="alert">
-                                    <!-- Error message -->
+                                  <div class="invalid-feedback" role="alert">
+                                    Please select a valid status.
                                   </div>
                                 </div>
                               </div>
