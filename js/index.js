@@ -6,16 +6,17 @@ const taskManager = new TaskManager(0);
 const newTaskForm = document.querySelector('#newTaskForm');
 
 
-// Select the inputs
-const newTaskNameInput = document.querySelector('#newTaskNameInput');
-const newTaskDescription = document.querySelector('#newTaskDescription');
-const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
-const newTaskDueDate = document.querySelector('#newTaskDueDate');
-
-
-// Form Validation 
+// Add Event Listener for Form Submission
 newTaskForm.addEventListener('submit', function(event) {
 
+
+  // Select the inputs
+  const newTaskNameInput = document.querySelector('#newTaskNameInput');
+  const newTaskDescription = document.querySelector('#newTaskDescription');
+  const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
+  const newTaskDueDate = document.querySelector('#newTaskDueDate');
+  const newTaskStatus = document.querySelector('#newTaskStatus');
+  const newTaskPriority = document.querySelector('#newTaskPriority');
 
 
   // Get the values of the inputs
@@ -23,24 +24,26 @@ newTaskForm.addEventListener('submit', function(event) {
   const description = newTaskDescription.value;
   const assignedTo = newTaskAssignedTo.value;
   const dueDate = newTaskDueDate.value;
+  const status = newTaskStatus.value;
+  const priority = newTaskPriority.value;
 
 
-  // Add the task to the task manager
-  taskManager.addTask(name, description, assignedTo, dueDate);
-  console.log(taskManager.tasks);
-
+  // Form Validation 
   if (newTaskForm.checkValidity() === false) {
     event.preventDefault();
     event.stopPropagation();
-  }
+  } 
   newTaskForm.classList.add('was-validated');
-  
-  
 
 
+  // Add the task to the task manager
+  taskManager.addTask(name, description, assignedTo, dueDate, status, priority);
+  console.log(taskManager.tasks);
+
+    
+    // Clear the form
+  // newTaskNameInput.value = '';
+  // newTaskDescription.value = '';
+  // newTaskAssignedTo.value = '';
+  // newTaskDueDate.value = '';
 })
-  // Clear the form
-  newTaskNameInput.value = '';
-  newTaskDescription.value = '';
-  newTaskAssignedTo.value = '';
-  newTaskDueDate.value = '';
