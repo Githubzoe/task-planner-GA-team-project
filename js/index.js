@@ -38,7 +38,7 @@ newTaskForm.addEventListener('submit', function(event) {
 
   // Add the task to the task manager
   taskManager.addTask(name, description, assignedTo, dueDate, status, priority);
-  console.log(taskManager.tasks);
+  // console.log(taskManager.tasks);
 
     
     // Clear the form
