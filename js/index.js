@@ -7,12 +7,12 @@ const newTaskForm = document.querySelector('#newTaskForm');
 // Add Event Listener for Form Submission
 newTaskForm.addEventListener('submit', function(event) {
   event.preventDefault();
-  event.stopPropagation();
-  // Form Validation 
+  // newTaskForm.classList.add('was-validated');
+
+  //Form Validation 
   if (!newTaskForm.checkValidity()) {
     newTaskForm.classList.add('was-validated');
-    return;
-  }
+  } else {
 
       // Select the inputs
   const newTaskNameInput = document.querySelector('#newTaskNameInput');
@@ -31,29 +31,30 @@ newTaskForm.addEventListener('submit', function(event) {
   const priority = newTaskPriority.value;
 
   // Add the task to the task manager
-taskManager.addTask(name, description, assignedTo, dueDate, status, priority); 
-
-
-  //clear user inputs
-  clearForm();
-
+  const newTask = taskManager.addTask(name, description, assignedTo, dueDate, status, priority); 
+  
+  //clear validation
   clearValidation();
 
-})
-
-  // Clear the form
-  function clearForm(){
-    newTaskNameInput.value = '';
-    newTaskDescription.value = '';
-    newTaskAssignedTo.value = '';
-    newTaskDueDate.value = '';
-    newTaskStatus.value = '';
-    newTaskPriority.value = '';
+  //clear form 
+  newTaskForm.reset();
   }
+});
+
+//function to clear the validation
   function clearValidation(){
-    newTaskForm.classList.delete('invalid-feedback');
+    newTaskForm.classList.remove('was-validated');
   }
 
+  // Function for clear the form
+  // function clearForm(){
+  //   newTaskNameInput.value = '';
+  //   newTaskDescription.value = '';
+  //   newTaskAssignedTo.value = '';
+  //   newTaskDueDate.value = '';
+  //   newTaskStatus.value = '';
+  //   newTaskPriority.value = '';
+  // }
 
   
 
