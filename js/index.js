@@ -31,10 +31,13 @@ newTaskForm.addEventListener('submit', function(event) {
   const priority = newTaskPriority.value;
 
   // Add the task to the task manager
-  const task1 = taskManager.addTask(name, description, assignedTo, dueDate, status, priority); 
-  console.log(task1);
+taskManager.addTask(name, description, assignedTo, dueDate, status, priority); 
 
+
+  //clear user inputs
   clearForm();
+
+  clearValidation();
 
 })
 
@@ -46,6 +49,9 @@ newTaskForm.addEventListener('submit', function(event) {
     newTaskDueDate.value = '';
     newTaskStatus.value = '';
     newTaskPriority.value = '';
+  }
+  function clearValidation(){
+    newTaskForm.classList.delete('invalid-feedback');
   }
 
 
