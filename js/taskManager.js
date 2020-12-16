@@ -1,5 +1,6 @@
+
 // Create a TaskManager class
-class TaskManager {
+export class TaskManager {
     // Set up the tasks and currentId property in the contructor
     constructor(currentId = 0) {
         this.tasks = [];
