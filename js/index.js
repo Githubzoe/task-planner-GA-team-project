@@ -1,3 +1,4 @@
+import {TaskManager} from './taskManager.js'
 // Initialize a new TaskManager with currentId set to 0
 const taskManager = new TaskManager(0);
 
