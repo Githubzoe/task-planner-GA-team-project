@@ -1,17 +1,62 @@
-(function() {
-    'use strict';
-    window.addEventListener('load', function() {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('needs-validation');
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-          if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-          }
-          form.classList.add('was-validated');
-        }, false);
-      });
-    }, false);
-    })();
+// Initialize a new TaskManager with currentId set to 0
+const taskManager = new TaskManager(0);
+
+// Select the New Task Form
+const newTaskForm = document.querySelector('#newTaskForm');
+
+// Add Event Listener for Form Submission
+newTaskForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  // newTaskForm.classList.add('was-validated');
+
+  //Form Validation 
+  if (!newTaskForm.checkValidity()) {
+    newTaskForm.classList.add('was-validated');
+  } else {
+
+      // Select the inputs
+  const newTaskNameInput = document.querySelector('#newTaskNameInput');
+  const newTaskDescription = document.querySelector('#newTaskDescription');
+  const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
+  const newTaskDueDate = document.querySelector('#newTaskDueDate');
+  const newTaskStatus = document.querySelector('#newTaskStatus');
+  const newTaskPriority = document.querySelector('#newTaskPriority');
+
+  // Get the values of the inputs
+  const name = newTaskNameInput.value;
+  const description = newTaskDescription.value;
+  const assignedTo = newTaskAssignedTo.value;
+  const dueDate = newTaskDueDate.value;
+  const status = newTaskStatus.value;
+  const priority = newTaskPriority.value;
+
+  // Add the task to the task manager
+  const newTask = taskManager.addTask(name, description, assignedTo, dueDate, status, priority); 
+  
+  //clear validation
+  clearValidation();
+
+  //clear form 
+  newTaskForm.reset();
+  }
+});
+
+//function to clear the validation
+  function clearValidation(){
+    newTaskForm.classList.remove('was-validated');
+  }
+
+  // Function for clear the form
+  // function clearForm(){
+  //   newTaskNameInput.value = '';
+  //   newTaskDescription.value = '';
+  //   newTaskAssignedTo.value = '';
+  //   newTaskDueDate.value = '';
+  //   newTaskStatus.value = '';
+  //   newTaskPriority.value = '';
+  // }
+
+  
+
+
+
