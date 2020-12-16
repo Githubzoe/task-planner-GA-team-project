@@ -31,8 +31,8 @@ newTaskForm.addEventListener('submit', function(event) {
   const priority = newTaskPriority.value;
 
   // Add the task to the task manager
-  const newTask = taskManager.addTask(name, description, assignedTo, dueDate, status, priority); 
-  
+  taskManager.addTask(name, description, assignedTo, dueDate, status, priority); 
+
   //clear validation
   clearValidation();
 
