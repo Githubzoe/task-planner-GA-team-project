@@ -1,23 +1,26 @@
 // Initialize a new TaskManager with currentId set to 0
 const taskManager = new TaskManager(0);
 
-
 // Select the New Task Form
 const newTaskForm = document.querySelector('#newTaskForm');
 
-
 // Add Event Listener for Form Submission
 newTaskForm.addEventListener('submit', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+  // Form Validation 
+  if (!newTaskForm.checkValidity()) {
+    newTaskForm.classList.add('was-validated');
+    return;
+  }
 
-
-  // Select the inputs
+      // Select the inputs
   const newTaskNameInput = document.querySelector('#newTaskNameInput');
   const newTaskDescription = document.querySelector('#newTaskDescription');
   const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
   const newTaskDueDate = document.querySelector('#newTaskDueDate');
   const newTaskStatus = document.querySelector('#newTaskStatus');
   const newTaskPriority = document.querySelector('#newTaskPriority');
-
 
   // Get the values of the inputs
   const name = newTaskNameInput.value;
@@ -27,23 +30,26 @@ newTaskForm.addEventListener('submit', function(event) {
   const status = newTaskStatus.value;
   const priority = newTaskPriority.value;
 
-
-  // Form Validation 
-  if (newTaskForm.checkValidity() === false) {
-    event.preventDefault();
-    event.stopPropagation();
-  } 
-  newTaskForm.classList.add('was-validated');
-
-
   // Add the task to the task manager
-  taskManager.addTask(name, description, assignedTo, dueDate, status, priority);
-  // console.log(taskManager.tasks);
+  const task1 = taskManager.addTask(name, description, assignedTo, dueDate, status, priority); 
+  console.log(task1);
 
-    
-    // Clear the form
-  // newTaskNameInput.value = '';
-  // newTaskDescription.value = '';
-  // newTaskAssignedTo.value = '';
-  // newTaskDueDate.value = '';
+  clearForm();
+
 })
+
+  // Clear the form
+  function clearForm(){
+    newTaskNameInput.value = '';
+    newTaskDescription.value = '';
+    newTaskAssignedTo.value = '';
+    newTaskDueDate.value = '';
+    newTaskStatus.value = '';
+    newTaskPriority.value = '';
+  }
+
+
+  
+
+
+

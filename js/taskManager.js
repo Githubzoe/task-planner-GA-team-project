@@ -18,8 +18,11 @@ class TaskManager {
             status: status,
             priority: priority
         };
-
+        console.log(task);
         // Push the task to the tasks property
         this.tasks.push(task);
+        console.log(this.tasks);
+        return ('sss');
+        
     }
 }
