@@ -583,14 +583,6 @@ button {
   }
 }
 
-/* Project Photo */
-
-/* .assignee {
-  display: flex;
-  align-items: center;
-  margin-left: -3px;
-} */
-
 
 @media (max-width: 1400px) {
   .photo__item {
@@ -645,6 +637,14 @@ button {
 
 a:hover {
   text-decoration: none;
+}
+
+.info-icon {
+  padding-left: -1rem;
+  padding-right: 0.5rem;
+}
+.fa-info-circle {
+  color: var(--true-v);
 }
 
 @media (hover: hover) {
