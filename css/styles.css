@@ -521,7 +521,7 @@ button {
 }
 
 .section__button--painted {
-  background-color: #b2b8f5;
+  background-color: var(--true-v);
 }
 
 .section__button svg {
@@ -538,7 +538,7 @@ button {
 
 @media (hover: hover) {
   .section__button:hover {
-    background-color: var(--true-v);
+    background-color: #b2b8f5;
   }
 
   .section__button:hover svg path {
@@ -731,7 +731,7 @@ a:hover {
   background-color: rgb(207, 28, 52);;
 }
 .MEDIUM {
-  background-color: #ffc000;
+  background-color: #f79997;
 }
 .LOW {
   background-color: var(--silver);
