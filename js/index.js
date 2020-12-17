@@ -42,6 +42,9 @@ newTaskForm.addEventListener('submit', function(event) {
 
   //clear form 
   newTaskForm.reset();
+
+  //close form
+  $("#newtaskinput").modal("hide")
   }
 });
 
