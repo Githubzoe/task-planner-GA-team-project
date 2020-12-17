@@ -3,9 +3,8 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, priority
     <li class="project__item" id="task${id}">
         <a href="#" class="project__link focus--box-shadow d-flex justify-content-around">
         <div class="project__wrapper d-flex align-items-center justify-content-between" data-toggle="collapse" href="#collapse${id}" role="button" aria-expanded="false" aria-controls="collapseExample1">
-        <div class="myTest custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="customCheck1">
-            <label class="custom-control-label" for="customCheck1"></label>
+        <div class="info-icon">
+            <i class="fas fa-info-circle"></i>
         </div>
         <div class="project__element project__inform col-3">
             <span class="project__inform-name">${name}</span>
