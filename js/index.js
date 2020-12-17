@@ -34,6 +34,9 @@ newTaskForm.addEventListener('submit', function(event) {
   // Add the task to the task manager
   taskManager.addTask(name, description, assignedTo, dueDate, status, priority); 
 
+  // Render the tasks
+  taskManager.render();
+  
   //clear validation
   clearValidation();
 
@@ -46,18 +49,5 @@ newTaskForm.addEventListener('submit', function(event) {
   function clearValidation(){
     newTaskForm.classList.remove('was-validated');
   }
-
-  // Function for clear the form
-  // function clearForm(){
-  //   newTaskNameInput.value = '';
-  //   newTaskDescription.value = '';
-  //   newTaskAssignedTo.value = '';
-  //   newTaskDueDate.value = '';
-  //   newTaskStatus.value = '';
-  //   newTaskPriority.value = '';
-  // }
-
-  
-
 
 

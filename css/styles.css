@@ -428,15 +428,6 @@ button {
   }
 }
 
-.profile__name {
-  margin-right: 1.5rem;
-}
-
-.profile__img {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-}
 
 @media (max-width: 1800px) {
   .header {
@@ -585,26 +576,11 @@ button {
 
 /* Project Photo */
 
-.photo {
+/* .assignee {
   display: flex;
   align-items: center;
   margin-left: -3px;
-}
-
-.photo__item {
-  width: 3rem;
-  height: 3rem;
-  margin-right: -12px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--alabaster);
-  background-color: var(--dune);
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-.photo__item img {
-  width: 6rem;
-  height: 4rem;
-}
+} */
 
 
 @media (max-width: 1400px) {
@@ -724,12 +700,33 @@ a:hover {
 .status {
   font-size: 0.8rem;
 }
-
-.status--in-progress {
-  color: white;
+.TODO {
+  background-color: rgb(207, 28, 52);;
+}
+.IN-PROGRESS {
   background-color: var(--cornflower-blue);
 }
+.REVIEW {
+  background-color: #ffc000;
+}
+.DONE {
+  background-color: #4EB14D;
+}
 
+/* Priority */
+.priority {
+  font-size: 0.8rem;
+}
+
+.HIGH {
+  background-color: rgb(207, 28, 52);;
+}
+.MEDIUM {
+  background-color: #ffc000;
+}
+.LOW {
+  background-color: var(--silver);
+}
 
 /* Edit/Delete button */
 
@@ -775,9 +772,7 @@ a:hover {
   background-color: var(--true-v);
 }
 
-.priority {
-  font-size: 1.3rem;
-}
+
 
 @media (hover: hover) {
   .banner__button:hover {
