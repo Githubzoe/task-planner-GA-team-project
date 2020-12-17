@@ -428,6 +428,15 @@ button {
   }
 }
 
+.profile__name {
+  margin-right: 1.5rem;
+}
+
+.profile__img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
 
 @media (max-width: 1800px) {
   .header {
