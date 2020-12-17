@@ -72,6 +72,11 @@ a {
   transition: color 0.3s ease;
 }
 
+.invalid-feedback{
+  font-size: 100%;
+}
+
+
 @media (hover: hover) {
   a:hover {
     color: var(--blue-violet);
@@ -516,7 +521,7 @@ button {
 }
 
 .section__button--painted {
-  background-color: #b2b8f5;
+  background-color: var(--true-v);
 }
 
 .section__button svg {
@@ -533,7 +538,7 @@ button {
 
 @media (hover: hover) {
   .section__button:hover {
-    background-color: var(--true-v);
+    background-color: #b2b8f5;
   }
 
   .section__button:hover svg path {
@@ -576,29 +581,6 @@ button {
     padding: 0.6rem;
     margin: 0 0.3rem;
   }
-}
-
-/* Project Photo */
-
-.photo {
-  display: flex;
-  align-items: center;
-  margin-left: -3px;
-}
-
-.photo__item {
-  width: 3rem;
-  height: 3rem;
-  margin-right: -12px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 1px solid var(--alabaster);
-  background-color: var(--dune);
-  transition: border-color 0.3s ease, background-color 0.3s ease;
-}
-.photo__item img {
-  width: 6rem;
-  height: 4rem;
 }
 
 
@@ -655,6 +637,14 @@ button {
 
 a:hover {
   text-decoration: none;
+}
+
+.info-icon {
+  padding-left: -1rem;
+  padding-right: 0.5rem;
+}
+.fa-info-circle {
+  color: var(--true-v);
 }
 
 @media (hover: hover) {
@@ -719,12 +709,33 @@ a:hover {
 .status {
   font-size: 0.8rem;
 }
-
-.status--in-progress {
-  color: white;
+.TODO {
+  background-color: rgb(207, 28, 52);;
+}
+.IN-PROGRESS {
   background-color: var(--cornflower-blue);
 }
+.REVIEW {
+  background-color: #ffc000;
+}
+.DONE {
+  background-color: #4EB14D;
+}
 
+/* Priority */
+.priority {
+  font-size: 0.8rem;
+}
+
+.HIGH {
+  background-color: rgb(207, 28, 52);;
+}
+.MEDIUM {
+  background-color: #f79997;
+}
+.LOW {
+  background-color: var(--silver);
+}
 
 /* Edit/Delete button */
 
@@ -770,9 +781,7 @@ a:hover {
   background-color: var(--true-v);
 }
 
-.priority {
-  font-size: 1.3rem;
-}
+
 
 @media (hover: hover) {
   .banner__button:hover {
