@@ -15,7 +15,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => `
                 <div class="project__element project__date col-2 pl-3" data-toggle="collapse" href="#collapse${id}" role="button" aria-expanded="false" aria-controls="collapseTaskDescription">
                     <time class="date" datetime="2020-05-05T10:00:00">${dueDate}</time>
                 </div>
-                <div class="project__element project__status col-2 pl-4" data-toggle="collapse" href="#collapse${id}" role="button" aria-expanded="false" aria-controls="collapseTaskDescription">
+                <div class="project__element project__status col-2 pl-5" data-toggle="collapse" href="#collapse${id}" role="button" aria-expanded="false" aria-controls="collapseTaskDescription">
                     <span class="status text-white font-weight-bold p-1 rounded ${status}">${status}</span>
                 </div>
                 <div class="project__element project__setting col-3 d-flex">
