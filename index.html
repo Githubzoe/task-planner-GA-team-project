@@ -72,7 +72,7 @@
         
         <section class="section project__section">
           <header class="section__header d-flex align-items-center justify-content-between mb-4">
-            <h2 class="section__title">Task List</h2>
+            <h2 class="section__title ml-5">Task List</h2>
             <div class="section__control">
               <button class="section__button section__button--painted focus--box-shadow" type="button" aria-label="Add New project" data-toggle="modal" data-target="#newtaskinput" id="openNewTask">
                 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" role="presentation">
@@ -85,18 +85,15 @@
                     <div class="modal-content">
                         <form id="newTaskForm" class="needs-validation" novalidate>
                             <div class="modal-header">
-        
                                 <h5 class="modal-title">Task Details</h5>
                                 <button type="button" id="close" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div class="modal-body">
-        
                                 <div class="alertModal" role="alert">
                                     <span></span>
                                 </div>
-        
                                 <div class="form-group">
                                     <label for="taskTitle">Task Name</label>
                                     <input class="form-control col-lg-12" type="text" id="newTaskNameInput" name="taskTitle" placeholder="Please enter the task name..." required>
@@ -112,9 +109,9 @@
                                   </div>
                                 </div>
                                 <div class="row">
-                                    <div class="form-group col-lg-6 ">
+                                    <div class="form-group col-lg-6">
                                         <label class="col-form-label" for="taskDueDate">Due Date</label>
-                                        <input class="form-control color" type="date" id="newTaskDueDate"
+                                        <input class="form-control" type="date" id="newTaskDueDate"
                                             name="taskDueDate" required>
                                         <div class="invalid-feedback" role="alert">
                                           Please select a valid due date. 
@@ -130,7 +127,6 @@
                                     </div>
                                 </div>
                           
-
                             
                               <div class="row">
                                 <div class="form-group col-6">
@@ -146,25 +142,9 @@
                                       Please select a valid status.
                                     </div>
                                 </div>
-
-                                <div class="form-group col-6">
-                                  <label for="priority">Priority</label>
-                                  <select class="form-control custom-select" id="newTaskPriority" required>
-                                      <option disabled selected value>Select an option</option>
-                                      <option>HIGH</option>
-                                      <option>MEDIUM</option>
-                                      <option>LOW</option>
-                                  </select>
-                                  <div class="invalid-feedback" role="alert">
-                                    Please select a valid status.
-                                  </div>
-                                </div>
                               </div>
                             </div>
-                                <div class="priotity_status d-flex justify-content-around">
-                                  <div class="col-md-6 card-group" id="selectPriority">
-                                  </div>
-                                </div>
+
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary shadow col-2" id="cancelButton"
                                         data-dismiss="modal">Cancel</button>
@@ -173,27 +153,25 @@
                         </form>
                     </div>
                 </div>
-              
-              </div><!-- End New Task Input Modal -->
             </div>
-          </header>
+          </header>  
+              <!-- End New Task Input Modal -->
+
 
           <div class="container-fluid project__container">
             <div class="todo__list__header">
-              <ul class="d-flex justify-content-around">
-                <li class="col-3 font-weight-bold">Task Name</li>
-                <li class="col-2 font-weight-bold">Assigned To</li>
-                <li class="col-2 pl-4 font-weight-bold">Due Date</li>
-                <li class="col-2 pl-4 font-weight-bold">Status</li>
-                <li class="col-2 font-weight-bold">Priority</li>
-                <li class="col-1  font-weight-bold pl-1">Update</li>
-  
+              <ul class="task_headers d-flex">
+                <li class="col-3 font-weight-bold pl-5">Task Name</li>
+                <li class="col-2 font-weight-bold text-center">Assigned To</li>
+                <li class="col-2 font-weight-bold text-center">Due Date</li>
+                <li class="col-2 font-weight-bold text-center">Status</li>
+                <li class="col-3 font-weight-bold pl-5">Update</li>
               </ul>
             </div>
   
-            <div class="scroll-area-sm">
+            <div class="scroll-area-sm card">
               <perfect-scrollbar>
-                <ul class="project" id="tasksList">
+                <ul class="project card-body" id="tasksList">
                 </ul>
               </perfect-scrollbar>
             </div>

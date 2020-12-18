@@ -606,6 +606,19 @@ button {
 }
 
 /* Project */
+.card {
+  background-color: var(--athens-gray);
+  border: none;
+}
+.card-body {
+  background-color: var(--athens-gray);
+  border: none;
+  padding-right: 0;
+}
+.discription {
+  background-color: var(--alabaster);
+  border-radius: 0 0 5px 5px;
+}
 
 .project__section{
   padding-left: 3rem;
@@ -639,6 +652,9 @@ a:hover {
   text-decoration: none;
 }
 
+.task_headers {
+  margin-bottom: 0;
+}
 .info-icon {
   padding-left: -1rem;
   padding-right: 0.5rem;
@@ -659,9 +675,6 @@ a:hover {
 
 .project__element {
   padding: 0 ;
-}
-.btn{
-  width: 5px;
 }
 
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
@@ -722,22 +735,14 @@ a:hover {
   background-color: #4EB14D;
 }
 
-/* Priority */
-.priority {
-  font-size: 0.8rem;
-}
 
-.HIGH {
-  background-color: rgb(207, 28, 52);;
-}
-.MEDIUM {
-  background-color: #f79997;
-}
-.LOW {
-  background-color: var(--silver);
-}
 
-/* Edit/Delete button */
+/* Mark As Done/Edit/Delete button */
+.done-botton {
+  font-size: .2rem;
+  border-radius: .2rem;
+  padding: 0;
+}
 
 .edit-btn {
   width: 2.5rem;
@@ -820,5 +825,3 @@ a:hover {
     font-size: 1rem;
   }
 }
-
-
