@@ -54,3 +54,27 @@ newTaskForm.addEventListener('submit', function(event) {
   }
 
 
+// Select the Tasks List
+const tasksList = document.querySelector('#tasksList');
+
+// Add an 'onclick' event listener to the Tasks List
+tasksList.addEventListener('click', (event) => {
+    console.log('INSIDE tasksList.addEventListener');
+    // Check if a "Mark As Done" button was clicked
+    if (event.target.classList.contains('done-button')) {
+        // Get the parent Task
+        const parentTask = event.target.parentElement.parentElement.parentElement.parentElement;
+        console.log('Get the parent Task '+ JSON.stringify(parentTask));
+        // Get the taskId of the parent Task.
+        const taskId = Number(parentTask.dataset.taskId);
+        console.log('Get the taskId of the parent Task.'+ taskId);
+        // Get the task from the TaskManager using the taskId
+        const task = taskManager.getTaskById(taskId);
+        console.log('Get the task from the TaskManager using the taskId '+ task);
+        // Update the task status to 'DONE'
+        task.status = 'DONE';
+
+        // Render the tasks
+        taskManager.render();
+    }
+});
