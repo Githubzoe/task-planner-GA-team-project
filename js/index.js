@@ -36,7 +36,10 @@ newTaskForm.addEventListener('submit', function(event) {
   const status = newTaskStatus.value;
 
   // Add the task to the task manager
-    taskManager.addTask(name, description, assignedTo, dueDate, status); 
+  taskManager.addTask(name, description, assignedTo, dueDate, status); 
+
+  // save the tasks to localStorage
+  taskManager.save();
 
   // Render the tasks
   taskManager.render();
@@ -77,6 +80,30 @@ tasksList.addEventListener('click', (event) => {
         taskManager.save();
         // Render the tasks
         taskManager.render();
+    }
+
+    // check if a "Delete" button was clicked
+    if (event.target.classList.contains('delete-btn')) {
+      // get the parent task
+      
+      const parentTask = event.target.parentElement.parentElement.parentElement.parentElement;
+      
+
+      // get the taskId of the parent Task
+      const taskId = Number(parentTask.dataset.taskId);
+      
+
+      // delete the task
+      taskManager.deleteTask(taskId);
+
+
+      // save the tasks to localStorage
+      taskManager.save();
+
+
+      // Render the tasks
+      taskManager.render(); 
+      
     }
 });
 

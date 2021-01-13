@@ -1,6 +1,6 @@
 // Create the HTML for a task
 const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => `
-    <li class="project__item" id="task${id}" data-task-id=${id}>
+    <li class="project__item" data-task-id=${id}>
         <a href="#" class="project__link focus--box-shadow d-flex justify-content-around">
             <div class="project__wrapper d-flex align-items-center justify-content-between">
                 <div class="info-icon" data-toggle="collapse" href="#collapse${id}" role="button" aria-expanded="false" aria-controls="collapseTaskDescription">
@@ -34,7 +34,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => `
           <p class="font-weight-bold lh-lg">Description</p>
           <p>${description}</p>
         </div>
-      </div>
+       </div>
     </li>
 `;
 
@@ -61,6 +61,27 @@ export class TaskManager {
         };
         // Push the task to the tasks property
         this.tasks.push(task);  
+    }
+
+    // create a deleteTask method
+    deleteTask(taskId) {
+        // create an empty array and store it in a new variable, newTasks
+        const newTasks = [];
+
+        // loop over the task
+        for (let i = 0; i < this.tasks.length; i++) {
+            // get the current task in the loop
+            const task = this.tasks[i];
+
+            // check if the task id is not the task id passed in as a parameter
+            if (task.id !== taskId) {
+                // push the task in the newTasks array
+                newTasks.push(task);
+            }
+        }
+
+        // set this.tasks to newTasks;
+        this.tasks = newTasks;
     }
     getTaskById(taskId) {
         // Create a variable to store the found task
@@ -114,7 +135,7 @@ export class TaskManager {
     save() {
         // create a JSON string of the tasks
         const taskJson = JSON.stringify(this.tasks);
-        console.log('called save()');
+        
         // store the JSON string in localStorage
         localStorage.setItem('tasks', taskJson);
 
@@ -129,7 +150,7 @@ export class TaskManager {
     load() {
         // check if any tasks are save in localStorage
         if (localStorage.getItem('tasks')) {
-            console.log('called load() check if any tasks are save in localStorage');
+            
             // get the JSON string of tasks in localStorage
             const taskJson = localStorage.getItem('tasks');
 
