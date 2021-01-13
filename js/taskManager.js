@@ -110,4 +110,41 @@ export class TaskManager {
         const tasksList = document.querySelector('#tasksList');
         tasksList.innerHTML = tasksHtml;
     }
+    // create save method
+    save() {
+        // create a JSON string of the tasks
+        const taskJson = JSON.stringify(this.tasks);
+        console.log('called save()');
+        // store the JSON string in localStorage
+        localStorage.setItem('tasks', taskJson);
+
+        // convert the currentId to string
+        const currentId = String(this.currentId);
+
+        // store the currentId in localStorage
+        localStorage.setItem('currentId', currentId);
+    }
+
+    // create the load method
+    load() {
+        // check if any tasks are save in localStorage
+        if (localStorage.getItem('tasks')) {
+            console.log('called load() check if any tasks are save in localStorage');
+            // get the JSON string of tasks in localStorage
+            const taskJson = localStorage.getItem('tasks');
+
+            // convert it to an array and store it in our TaskManager
+            this.tasks = JSON.parse(taskJson);
+        }
+
+        // check if the currentId is saved in localStorage
+        if (localStorage.getItem('currentId')) {
+            // get the currentId string in localStorage
+            console.log('called load() check if any currentId are save in localStorage');
+            const currentId = localStorage.getItem('currentId');
+
+            // convert the currentId to a number and store it in our TaskManager
+            this.currentId = Number(currentId);
+        }
+    } 
 }
