@@ -747,7 +747,7 @@ a:hover {
 .edit-btn {
   width: 2.5rem;
   height: 2.5rem;
-  padding: 0.8rem;
+  padding: 0.4rem;
   border-radius: 90px;
   background-color: #b2b8f5;
 }
@@ -756,9 +756,11 @@ a:hover {
 .delete-btn {
   width: 2.5rem;
   height: 2.5rem;
-  padding: 0.6rem;
+  padding: 0.4rem;
   border-radius: 90px;
   background-color: var(--rajah);
+  background-image: url("trash.png");
+  background-size: cover;
 }
 @media (hover: hover) {
   .edit-btn:hover  {

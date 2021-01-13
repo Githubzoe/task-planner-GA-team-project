@@ -24,7 +24,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => `
                         <img src="img/edit.png" alt="">
                     </button>
                     <button class="btn delete-btn focus--box-shadow-delete d-flex align-items-center justify-content-center ml-3 pr-2 mr-3" type="button">
-                        <img src="img/trash.png"/>
+                        
                     </button>
                 </div>
             </div>
