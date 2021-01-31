@@ -1,0 +1,22 @@
+{
+  "name": "task-planner-ga-team-project",
+  "version": "1.0.0",
+  "description": "task planner",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Githubzoe/task-planner-GA-team-project.git"
+  },
+  "author": "Airone/Zoe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Githubzoe/task-planner-GA-team-project/issues"
+  },
+  "homepage": "https://github.com/Githubzoe/task-planner-GA-team-project#readme",
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  }
+}
