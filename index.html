@@ -72,14 +72,13 @@
         
         <section class="section project__section">
           <header class="section__header d-flex align-items-center justify-content-between mb-4">
-            <h2 class="section__title ml-3">Task List</h2>
+            <h2 class="section__title ml-5">Task List</h2>
             <div class="section__control">
-            <!-- <div class="container-fluid">   -->
-              <!-- <button class="section__button section__button--painted focus--box-shadow" type="button" aria-label="Add New project" data-toggle="modal" data-target="#newtaskinput" id="openNewTask">
+              <button class="section__button section__button--painted focus--box-shadow" type="button" aria-label="Add New project" data-toggle="modal" data-target="#newtaskinput" id="openNewTask">
                 <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" role="presentation">
                   <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"/>
                 </svg>
-              </button> -->
+              </button>
               <!-- New Task Input Modal -->
               <div class="modal fade" id="newtaskinput">
                 <div class="modal-dialog modal-lg">
@@ -160,7 +159,7 @@
               <!-- End New Task Input Modal -->
 
 
-          <!-- <div class="container-fluid project__container">
+          <div class="container-fluid project__container">
             <div class="todo__list__header">
               <ul class="task_headers d-flex">
                 <li class="col-3 font-weight-bold pl-5">Task Name</li>
@@ -169,44 +168,14 @@
                 <li class="col-2 font-weight-bold text-center">Status</li>
                 <li class="col-3 font-weight-bold pl-5">Update</li>
               </ul>
-            </div> -->
-            <div class="container-fluid text-center">
-              <div class="row row-col-6">
-                <div class="col font-weight-bold">
-                  <button class="section__button section__button--painted focus--box-shadow" type="button" aria-label="Add New project" data-toggle="modal" data-target="#newtaskinput" id="openNewTask">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" role="presentation">
-                      <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z"/>
-                    </svg>
-                  </button>
-                </div>
-                <div class="col font-weight-bold">TO-DO
-                  <!-- <ul class="project card-body" id="tasksList"></ul> -->
-                </div>
-                <div class="col font-weight-bold">IN-PROGRESS
+            </div>
   
-                </div>
-                <div class="col font-weight-bold">REVIEW
-                  
-                </div>
-                <!-- <span class="border"> -->
-                <div class="col font-weight-bold">DONE
-                  
-                    <ul class="project card-body" id="tasksList"></ul>
-                
-                </div>
-                <!-- </span> -->
-
-              </div>
-              
-            </div>    
-  
-            <!-- <div class="scroll-area-sm card"> -->
-              <!-- <perfect-scrollbar> -->
-                <!-- <ul class="project card-body" id="tasksList"> -->
-                <!-- <ul class="card" id="tasksList">   -->
-                <!-- </ul> -->
-              <!-- </perfect-scrollbar> -->
-            <!-- </div> -->
+            <div class="scroll-area-sm card">
+              <perfect-scrollbar>
+                <ul class="project card-body" id="tasksList">
+                </ul>
+              </perfect-scrollbar>
+            </div>
           </div>        
         </section>
       </main>
@@ -214,8 +183,8 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    <!-- <script src="https://kit.fontawesome.com/b893dac1a0.js" crossorigin="anonymous"></script> -->
-    <script type ="text/javascript" src="js/taskManager.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/b893dac1a0.js" crossorigin="anonymous"></script>
+    <script type ="module" src="js/taskManager.js"></script>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
