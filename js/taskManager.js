@@ -41,7 +41,7 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status, id) => `
 
 
 // Create a TaskManager class
-export class TaskManager {
+class TaskManager {
     // Set up the tasks and currentId property in the contructor
     constructor(currentId = 0) {
         this.tasks = [];
@@ -161,7 +161,7 @@ export class TaskManager {
         // check if the currentId is saved in localStorage
         if (localStorage.getItem('currentId')) {
             // get the currentId string in localStorage
-            console.log('called load() check if any currentId are save in localStorage');
+        
             const currentId = localStorage.getItem('currentId');
 
             // convert the currentId to a number and store it in our TaskManager
@@ -169,3 +169,6 @@ export class TaskManager {
         }
     } 
 }
+if (typeof module != "undefined") {
+    module.exports = TaskManager;
+  } 
